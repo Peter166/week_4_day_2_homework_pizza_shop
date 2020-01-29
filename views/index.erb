@@ -1,0 +1,9 @@
+<p>All the pizzas</p>
+  <hr /> <!-- allows to give us a line on the website-->
+
+<%  for order in @orders %>
+  <p> Name:<%= order.pretty_name() %> </p>
+  <p> Order:<%= order.quantity %> x <%= order.topping %> </p>
+  <p><a href="/pizza-orders/<%= order.id %>">Show Order</a></p> <!-- this allows us to create link that have the id of the order. <= order.id >  -->
+  <hr />
+  <% end %>
